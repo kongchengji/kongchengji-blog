@@ -1,0 +1,16 @@
+{
+  "name": "vuepress-theme-reco-demo",
+  "version": "2.0.0",
+  "description": "制作个人博客页面（使用vuepress）",
+  "author": "kongchengji",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev .",
+    "start": "vuepress dev .",
+    "build": "vuepress build ."
+  },
+  "dependencies": {
+    "vuepress": "2.0.0-beta.48",
+    "vuepress-theme-reco": "2.0.0-beta.30"
+  }
+}
