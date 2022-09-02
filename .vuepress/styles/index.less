@@ -1,0 +1,87 @@
+// // 对于界面样式进行自定义修改
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    // 搜索框宽度
+    --search-input-width: 12rem;
+}
+
+// 黑夜模式
+.dark {
+    .banner-wrapper {
+        background: none !important;
+    }
+    .logo {
+        position: relative;
+        filter: drop-shadow(rgb(229 231 235) 100px 0);
+        left: -100px;
+    }
+}
+
+// 顶部导航栏
+.navbar-container {
+
+    // 导航按钮
+    .nav-link {
+        &:hover {
+            color: #616AE5;
+        }
+    }
+    // 搜索框
+    .search-box {
+        // 清空按钮移除
+        input::-webkit-search-cancel-button {
+            display: none;
+        }
+    }
+}
+// 页面内容部分
+.home-wrapper {
+    // banner
+    .banner-wrapper {
+        height: 60vh;
+        .hero-content {
+            h1 {
+                /* 文字阴影渐变 */
+                animation: san 4s linear infinite;
+                font-size: 3rem;    
+            }
+            p {
+                font-size: 1.25rem;
+                margin-top: 3rem;
+            }
+        }
+        @keyframes san{
+            0%,100%{
+                color: rgb(255, 255, 255);         
+                text-shadow: 0 0 5px  #20AAEE,
+                            0 0 15px  #20AAEE,
+                            0 0 25px  #20AAEE,
+                            0 0 50px  #20AAEE;
+            }
+            40%, 60%{
+                color: rgba(32,170,238,0.5);
+                text-shadow: none;
+            }        
+        }
+    }
+
+    // 内容
+    .home-blog-content {
+        .social-links {
+            .social-item {
+                @social-width: 45px;
+                @social-height: 35px;
+                width: @social-width;
+                height: @social-height;
+                svg {
+                    width: @social-width !important;
+                    height: @social-height !important;
+                }
+            }
+        }
+    }
+}

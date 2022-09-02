@@ -17,9 +17,9 @@ export default defineUserConfig({
   ],
   // 主题配置
   theme: recoTheme({
-    style: '@vuepress-reco/style-default',
+    // style: '@vuepress-reco/style-default',
     logo: '/img/icon.svg',
-    author: 'reco_luan',
+    author: 'kongchengji',
     // series 为原 sidebar
     series: {
       '/docs/theme-reco/': [
@@ -33,10 +33,10 @@ export default defineUserConfig({
         }
       ]
     },
-    navbar:
+    navbar: 
     [
       { text: '首页', link: '/' },
-      { text: 'Categories', link: '/categories/reco/1/' },
+      { text: 'Categories', link: '/categories/category1/1/' },
       { text: 'Tags', link: '/tags/tag1/1/' },
       { text: 'Docs',
         children: [
