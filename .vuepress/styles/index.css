@@ -8,6 +8,9 @@
 .dark .banner-wrapper {
   background: none !important;
 }
+.dark .social-item svg {
+  fill: #adbac7;
+}
 .dark .logo {
   position: relative;
   filter: drop-shadow(#e5e7eb 100px 0);
@@ -46,6 +49,9 @@
 .home-wrapper .home-blog-content .social-links .social-item {
   width: 45px;
   height: 35px;
+}
+.home-wrapper .home-blog-content .social-links .social-item:hover {
+  cursor: pointer;
 }
 .home-wrapper .home-blog-content .social-links .social-item svg {
   width: 45px !important;

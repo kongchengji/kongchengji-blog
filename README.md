@@ -14,6 +14,7 @@ banner:
 blog:
   socialLinks: 
     - { icon: 'BrandCsdn', link: 'https://blog.csdn.net/qq_36171287' }
+    - { icon: 'Brandjuejin', link: 'https://juejin.cn/user/2357005414307127' }
 isShowTitleInHome: true
 footer:
   startYear: 2022

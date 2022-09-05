@@ -14,6 +14,12 @@
     .banner-wrapper {
         background: none !important;
     }
+    // 社区图标
+    .social-item{
+        svg {
+            fill: rgb(173, 186, 199);
+        }
+    }
     .logo {
         position: relative;
         filter: drop-shadow(rgb(229 231 235) 100px 0);
@@ -77,6 +83,9 @@
                 @social-height: 35px;
                 width: @social-width;
                 height: @social-height;
+                &:hover {
+                    cursor: pointer;
+                }
                 svg {
                     width: @social-width !important;
                     height: @social-height !important;

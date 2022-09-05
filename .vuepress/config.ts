@@ -20,30 +20,27 @@ export default defineUserConfig({
     // style: '@vuepress-reco/style-default',
     logo: '/img/icon.svg',
     author: 'kongchengji',
+    authorAvatar: '/img/home/headportrait.jpg',
     // series 为原 sidebar
     series: {
-      '/docs/theme-reco/': [
+      '/docs/highPerformanceJavaScript/': [
         {
-          text: 'module one',
-          children: ['home', 'theme']
-        },
-        {
-          text: 'module two',
-          children: ['api', 'plugin']
+          text: '高性能JavaScript',
+          children: [
+            'hpjs01.md', 'hpjs02.md', 'hpjs03.md', 'hpjs04.md', 'hpjs05.md', 'hpjs06.md', 'hpjs07.md', 'hpjs08.md'
+          ]
         }
       ]
     },
     navbar: 
     [
       { text: '首页', link: '/' },
-      { text: 'Categories', link: '/categories/category1/1/' },
-      { text: 'Tags', link: '/tags/tag1/1/' },
-      { text: 'Docs',
+      { text: '博客专栏', 
         children: [
-          { text: 'vuepress-reco', link: '/docs/theme-reco/theme' },
-          { text: 'vuepress-theme-reco', link: '/blogs/other/guide' }
+          { text: '高性能JavaScript', link: '/docs/highPerformanceJavaScript/hpjs01' },
         ]
       },
+      { text: '标签索引', link: '/tags/gaoxingnenJavaScript/1/' },
     ],
     // 公告，我目前不需要，直接注释掉即可
     // bulletin: {
