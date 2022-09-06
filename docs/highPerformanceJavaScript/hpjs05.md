@@ -9,15 +9,15 @@ categories:
  - 高性能JavaScript
 ---
 
-# <font color=#40A9FF>快速响应的用户界面</font>
-你愿意体验一个交互流畅的网页，还是愿意体验一个点击后卡一会儿才响应的页面<font color=#0ff size=3>（如在学校抢课时网页）</font>？
+# <div color=#40A9FF>快速响应的用户界面</div>
+你愿意体验一个交互流畅的网页，还是愿意体验一个点击后卡一会儿才响应的页面<div color=#0ff size=3>（如在学校抢课时网页）</div>？
 
 ![在这里插入图片描述](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6268bf2837d0463daf2a1a8ba6ede3e6~tplv-k3u1fbpfcp-zoom-1.image)
 
 
 **好的JavaScript编写方式能够提升页面交互响应的速度，以下知识可进行了解与应用**
 
-## <font color=#FFC640>浏览器UI线程</font>
+## <div color=#FFC640>浏览器UI线程</div>
 用于执行JavaScript和更新用户界面的进程通常被称为 **“浏览器UI线程”**
 
 UI线程的工作基于一个简单的队列系统，任务会被保存到队列中直到进程空闲。 一旦空闲，队列中下一个任务就被重新提取出来并运行。
@@ -51,7 +51,7 @@ UI线程的工作基于一个简单的队列系统，任务会被保存到队列
 <hr>
 <br>
 
-## <font color=#FFC640>浏览器限制</font>
+## <div color=#FFC640>浏览器限制</div>
 浏览器会限制JavaScript任务的运行时间
 
 这种限制是必须的，为了确保某些恶意代码不能通过永不停止的密集操作锁住用户的浏览器或计算机
@@ -79,7 +79,7 @@ chrome浏览器：
 * * *
 
 
-### <font color=#FF7021>定时器</font>
+### <div color=#FF7021>定时器</div>
 
 JavaScript 定时器可以和UI线程进行交互，有助于把运行耗时较长的脚本拆分为较短的片段
 
@@ -90,12 +90,12 @@ JavaScript 定时器可以和UI线程进行交互，有助于把运行耗时较�
 在Windows系统中定时器分辨率为15.6毫秒，这是微软故意设置的，它觉得设置精度更低对资源消耗过大，所以一个延时15.6毫秒的定时器将根据最后一次系统时间刷新而转换为0 或 15.
 
 设置定时器延时小于15将会导致IE浏览器锁定，所以延迟的最小值建议设置为25以确保至少有15毫秒延迟。               
-————  <font color=#F00>**这就是在写`setTimeout`和`setInterval`定时方法时，几乎都会把延时时间写的超过一定毫秒以上的原因。**</font>
+————  <div color=#F00>**这就是在写`setTimeout`和`setInterval`定时方法时，几乎都会把延时时间写的超过一定毫秒以上的原因。**</div>
 
 <br>
 <br>
 
-## <font color=#FFC640>Web Workers</font>
+## <div color=#FFC640>Web Workers</div>
 
 自JavaScript诞生以来，一直是单线程的方式。 但是其实JavaScript也有`多线程 `存在了，这就是Web Workers的功劳啦！
 
@@ -116,7 +116,7 @@ JavaScript 定时器可以和UI线程进行交互，有助于把运行耗时较�
 <hr>
 <br>
 
-### <font color=#FF7021>Worker运行环境</font>
+### <div color=#FF7021>Worker运行环境</div>
 
 
 Worker 接口是 `Web Workers API` 的一部分，指的是一种可由脚本创建的后台任务，任务执行中可以向其创建者收发信息。要创建一个 Worker ，只须调用 Worker(URL) 构造函数，函数参数 `URL` 为指定的脚本。Worker 也可以创建新的 Worker，当然，所有 Worker 必须与其创建者[同源](https://wiki.developer.mozilla.org/zh-CN/docs/Web/Security/Same-origin_policy)
@@ -141,7 +141,7 @@ Worker 接口是 `Web Workers API` 的一部分，指的是一种可由脚本创
 
 <br>
 
-### <font color=#FF7021>示例</font>
+### <div color=#FF7021>示例</div>
 **基础示例：**
 结构
 ![\[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-vd2oZqpt-1621694214686)(en-resource://database/582:1)\]](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fb3d7f3467c547aea55b52f568b20177~tplv-k3u1fbpfcp-zoom-1.image)
@@ -203,7 +203,7 @@ onmessage = function(e) {
 
 <br>
 
-### <font color=#FF7021>实际应用</font>
+### <div color=#FF7021>实际应用</div>
 
 `Web Workers`适用于哪些处理纯数据，或者与浏览器UI无关的长时间运行脚本。
 
@@ -214,7 +214,7 @@ onmessage = function(e) {
 
 <br>
 
-## <font color=#FFC640>小节</font>
+## <div color=#FFC640>小节</div>
 
 * JavaScript的任务最好不要超过100毫秒，过长的运行时间会导致UI更新出现明显的延迟
 * 定时器可以帮助你拆分长时间运行脚本为一系列的小任务

@@ -10,10 +10,10 @@ categories:
 ---
 
 
-# <center><font color=#40A9FF>字符串</font></center>
+# <center><div color=#40A9FF>字符串</div></center>
 字符串连接会导致令人惊讶的性能问题
 
-## <font color=#FFC640>字符串拼接方法</font>
+## <div color=#FFC640>字符串拼接方法</div>
 | 方法 | 示例 | 说明 |
 |--|--|--|
 | The + operator |  str = "a" + "b" + "c"  | 加 |
@@ -25,7 +25,7 @@ categories:
 
 <br>
 
-### <font color=#FF7021>加（+）和加等（+=）</font>
+### <div color=#FF7021>加（+）和加等（+=）</div>
 
 常用 += 操作：
 ` var str = '' `
@@ -46,7 +46,7 @@ categories:
 <br>
 <hr>
 
-### <font color=#F00>实际测试发现书上内容错误</font>
+### <div color=#F00>实际测试发现书上内容错误</div>
 我实际循环多次操作后，发现str += "one" + "two"速度更快，**是我使用的测试代码不准确吗？**
 
 **纸上得来终觉浅，知此事要躬行**
@@ -118,7 +118,7 @@ Firefox火狐:
 如果循环次数量极大，在火狐浏览器中， **+=操作符**的性能会远远优于 **+操作符**
 
 
-### <font color=#FF7021>Array.join()</font>
+### <div color=#FF7021>Array.join()</div>
 
 数组项合并，书上的内容和我实际测试似乎又不太一样
 ![在这里插入图片描述](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3d74c1a617f94380b1a3539328134f0c~tplv-k3u1fbpfcp-zoom-1.image)
@@ -161,7 +161,7 @@ IE浏览器：
 
 
 
-## <font color=#F00>时代变了</font>
+## <div color=#F00>时代变了</div>
 ![在这里插入图片描述](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/20a24d0714254f01bd057f672c259461~tplv-k3u1fbpfcp-zoom-1.image)
 时代好像变了，经过测试，大量循环测试后发现，**通过数组转字符串Array.join的方式是最快一些的， 单纯的 +号操作速度居然和concat慢的差不多**
 
@@ -213,7 +213,7 @@ IE浏览器：
 <br>
 
 
-# <font color=#40A9FF>正则表达式</font>
+# <div color=#40A9FF>正则表达式</div>
 
 这里介绍一下正则表达式手册：[https://gitee.com/thinkyoung/learn_regex](https://gitee.com/thinkyoung/learn_regex)
 
@@ -221,7 +221,7 @@ IE浏览器：
 <br>
 
 
-## <font color=#FFC640>正则表达式工作原理</font>
+## <div color=#FFC640>正则表达式工作原理</div>
 处理步骤：
 
 1. 编译
@@ -240,7 +240,7 @@ IE浏览器：
     * 如果字符串所有字符都经历这个过程，还没成功，宣布匹配失败
 
 
-### <font color=#FF7021>分支和回溯处理过程</font>
+### <div color=#FF7021>分支和回溯处理过程</div>
 
 例子：
 ```javascript
@@ -271,7 +271,7 @@ console.log(str.match(reg))
 <hr>
 <br>
 
-## <font color=#FFC640>提高正则表达式效率</font>
+## <div color=#FFC640>提高正则表达式效率</div>
 因为正则表达式性能受目标字符串影响会产生较大差异，因此没有简单的方法可以测试正则表达式性能
 
 只能笼统的把《高性能JavaScript》书上的方法说一下：

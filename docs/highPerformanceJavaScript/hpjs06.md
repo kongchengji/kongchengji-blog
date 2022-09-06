@@ -9,9 +9,9 @@ categories:
  - 高性能JavaScript
 ---
 
-# <center><font color=#40A9FF>Ajax</font></center>
+# <center><div color=#40A9FF>Ajax</div></center>
 
-Ajax全称：<font color=#9254DE> **Asynchronous Javascript And XML （异步 JavaScript 和 XML）**</font>
+Ajax全称：<div color=#9254DE> **Asynchronous Javascript And XML （异步 JavaScript 和 XML）**</div>
 
 有关Ajax的博客其实数不胜数了，我之前写过的博客中也存在一些Ajax的内容
 ![在这里插入图片描述](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3f17833033184896b139e6dc79f56b46~tplv-k3u1fbpfcp-zoom-1.image)
@@ -19,18 +19,18 @@ Ajax全称：<font color=#9254DE> **Asynchronous Javascript And XML （异步 Ja
 
 不过Ajax也是高性能JavaScript的基础知识，可以通过延迟下载体积较大的资源文件来使得页面加载速度更快。
 
-通过异步方式在客户端和服务端之间传输数据，甚至可以只用一个HTTP请求就获取整个页面的资源<font color=#73D13D> （肯定不是赞成这种方式）</font>
+通过异步方式在客户端和服务端之间传输数据，甚至可以只用一个HTTP请求就获取整个页面的资源<div color=#73D13D> （肯定不是赞成这种方式）</div>
 
 
 <hr>
 <br>
 
-## <font color=#FFC640>数据传输</font>
+## <div color=#FFC640>数据传输</div>
 
 Ajax从最基本层面上： 一种与服务器通信而无须重载页面的方法
 
 
-## <font color=#FFC640>请求数据</font>
+## <div color=#FFC640>请求数据</div>
 
 五种常用技术用于向服务器请求数据：
 * XMLHttpRequest（XHR）
@@ -45,13 +45,13 @@ Ajax从最基本层面上： 一种与服务器通信而无须重载页面的方
 
 <br>
 
-### <font color=#FF827B>XMLHttpRequest（XHR）</font>
+### <div color=#FF827B>XMLHttpRequest（XHR）</div>
 
 这是目前最常用的技术，允许异步发送和接收数据
 
 [MDN介绍](https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest)
 
-<font color=#40A9FF>**这是Ajax的核心**</font>，所有主流浏览器对它都提供了完善的支持，<font color=#f00>也就是说不支持这个的都是非主流浏览器</font>
+<div color=#40A9FF>**这是Ajax的核心**</div>，所有主流浏览器对它都提供了完善的支持，<div color=#f00>也就是说不支持这个的都是非主流浏览器</div>
 
 
 ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f5827e1f08934789a2071c7356ede45b~tplv-k3u1fbpfcp-watermark.image)
@@ -75,7 +75,7 @@ req.setRequestHeader('X-Requested-with','XMLHttpRequest');//设置请求头信�
 req.send();//发送请求
 ```
 
-<font color=#9254DE>**readyState状态值**</font>有五种状态 （这和status状态码还是有区别的）：
+<div color=#9254DE>**readyState状态值**</div>有五种状态 （这和status状态码还是有区别的）：
 * 0 － （未初始化）还没有调用send()方法 
  * 1 － （载入）已调用send()方法，正在发送请求 
  * 2 － （载入完成）send()方法执行完成，已经接收到全部响应内容 
@@ -83,7 +83,7 @@ req.send();//发送请求
  * 4 － （完成）响应内容解析完成，可以在客户端调用了， 接收到了所有信息
 
 
-<font color=#9254DE>**status状态码**</font>是XMLHttpRequest对象的一个属性，表示响应的HTTP状态码
+<div color=#9254DE>**status状态码**</div>是XMLHttpRequest对象的一个属性，表示响应的HTTP状态码
 
 举个例子：404，也就是我们常说的和谐之光，实际指的是没有发现文件或者URL没有找到对应页面
 
@@ -105,7 +105,7 @@ req.send();//发送请求
 <br>
 
 
-至于低版本的IE不仅不支持“流”，也不会提供readyState为3的状态，从服务器传回的数据会被当作字符串或者XML对象，导致处理大量数据变慢。 <font color=#f00> 不过这一点我认为可以略过了，这里低版本IE指IE6及以下，如果现在做的项目还需要兼容这些浏览器，那真的也没什么可说的了 </font>
+至于低版本的IE不仅不支持“流”，也不会提供readyState为3的状态，从服务器传回的数据会被当作字符串或者XML对象，导致处理大量数据变慢。 <div color=#f00> 不过这一点我认为可以略过了，这里低版本IE指IE6及以下，如果现在做的项目还需要兼容这些浏览器，那真的也没什么可说的了 </div>
 <br>
 
 
@@ -118,9 +118,9 @@ req.send();//发送请求
 
 <br>
 
-### <font color=#FF827B>动态脚本注入</font>
+### <div color=#FF827B>动态脚本注入</div>
 
-这种技术**最大的好处**，就是<font color=#F00>**相较于XHR来说，能够进行跨域请求**。</font>
+这种技术**最大的好处**，就是<div color=#F00>**相较于XHR来说，能够进行跨域请求**。</div>
 
 因为这是一个Hack，所以不需要实例化一个对象，可以直接用JavaScript创建一个新的脚本标签，并设置src属性为不同域的URL。
 ```javascript
@@ -133,7 +133,7 @@ document.getElementsByClassName('head')[0].appendChild(scriptElement);
 就是可以使用script标签进行跨域
 
 
-<font color=#F00> **你以为这种方式解决跨域就好了吗？**</font>
+<div color=#F00> **你以为这种方式解决跨域就好了吗？**</div>
 
 ![\[加图 太年轻\]](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5a5c8846189b4618b1c249ea0f06c79c~tplv-k3u1fbpfcp-zoom-1.image)
 
@@ -154,7 +154,7 @@ document.getElementsByClassName('head')[0].appendChild(scriptElement);
 **注意**：
 虽然缺陷比较多，但是**这项技术的速度非常快**，响应消息是作为JavaScript执行的。
 
-引入外部JavaScript代码时一定要多加小心，这种技术从你无法直接控制的服务器上请求数据时可能会有危险，JavaScript没有任何权限和访问控制的概念，<font color=#9254DE>**谁知道你引入的到底是什么东西**</font>
+引入外部JavaScript代码时一定要多加小心，这种技术从你无法直接控制的服务器上请求数据时可能会有危险，JavaScript没有任何权限和访问控制的概念，<div color=#9254DE>**谁知道你引入的到底是什么东西**</div>
 ![在这里插入图片描述](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6a111d9d288e4d3f8406860e6431a269~tplv-k3u1fbpfcp-zoom-1.image)
 
 
@@ -162,7 +162,7 @@ document.getElementsByClassName('head')[0].appendChild(scriptElement);
 <br>
 <br>
 
-### <font color=#FF827B>Multipart XHR</font>
+### <div color=#FF827B>Multipart XHR</div>
 
 MXHR允许客户端用一个http请求就从服务器想客户端传送多个资源。
 
@@ -174,13 +174,13 @@ Multipart XHR通过在服务器将资源打包成一个由双方约定的字符�
 <br>
 <br>
 
-### <font color=#FF827B>信标（beacons)</font>
+### <div color=#FF827B>信标（beacons)</div>
 
 这项技术**类似于动态脚本注入**
 
 使用JavaScript创建一个新的Image对象, 并把src属性设置为服务器上的脚本URL.。该URL包含了我们要通过GET传回的键值对数据。信标无法发送POST请求
 
-<font color=#F00>**请注意并没有创建img元素或把它插入DOM**</font>
+<div color=#F00>**请注意并没有创建img元素或把它插入DOM**</div>
 
 ```javascript
 var url = '接口名称';
@@ -287,25 +287,25 @@ HTML界面效果：
 <br>
 
 
-## <font color=#FFC640>数据格式</font>
+## <div color=#FFC640>数据格式</div>
 
 当考虑数据传输技术时，你必须考虑这些因素：功能性、兼容性、性能以及方向（你发送给服务器还是服务器发送给你）
 
 **如果考虑数据格式，那唯一需要比较的标准就是速度，没有哪一种数据格式会始终比其他格式更好，但目前JSON最主流**
 
-### <font color=#FF827B>XML</font>
+### <div color=#FF827B>XML</div>
 
 最初Ajax开始流行时，选择的是XML作为数据格式 **（PS：那时JSON还没正式作为交换格式）**
 
 但是相比其他格式，XML极其冗长，对JavaScript程序员解析时十分费力，不能轻易完成。
 最重要的是XML解析起来的性能你远比其他数据格式慢，在高性能Ajax中，XML已经没有立足之地了
 
-<font color=#F00>**所以我建议，不是特别老的项目就不要用这个XML了，让前端轻松一点吧！！！**</font>
+<div color=#F00>**所以我建议，不是特别老的项目就不要用这个XML了，让前端轻松一点吧！！！**</div>
 
 
 
 
-### <font color=#FF827B>JSON</font>
+### <div color=#FF827B>JSON</div>
 
 嗯，这是目前最流行的数据格式，其实也不需要我多说，大部分前后端数据交流应该都会用到
 
@@ -318,14 +318,14 @@ JavaScript中可以使用eval来解析JSON字符串，但是在代码中使用`e
 
 <br>
 
-### <font color=#FF827B>HTML</font>
+### <div color=#FF827B>HTML</div>
 这种数据格式与XML类似，JavaScript可以将较大的数据结构转换为简单的HTML，但是服务器处理更快，服务器可以处理好整个HTML传回客户端。
 
 但是这项技术的缺点也十分明显，数据更加臃肿，在网络中传输速度会变慢
 <br>
 
 
-### <font color=#FF827B>自定义格式</font>
+### <div color=#FF827B>自定义格式</div>
 
 理想的数据格式应该只包含必要结构，可以自己定义一种这样的格式，简单地把数据用分隔符连接起来
 ```javascript
@@ -338,7 +338,7 @@ Jojo;data;hello world;the;people;new;
 <br>
 <br>
 
-# <center><font color=#40A9FF>Ajax性能指南</font></center>
+# <center><div color=#40A9FF>Ajax性能指南</div></center>
 
 **最快的Ajax请求就是没有请求**
 
@@ -353,7 +353,7 @@ Jojo;data;hello world;the;people;new;
 第一种技术使用最简单而且好维护，第二种技术给你最大的控制权
 <br>
 
-### <font color=#FF827B>设置HTTP头信息</font>
+### <div color=#FF827B>设置HTTP头信息</div>
 
 **如果希望Ajax响应能被浏览器缓存，那么必须使用GET方式发送请求**
 
@@ -363,7 +363,7 @@ Jojo;data;hello world;the;people;new;
 
 <br><br>
 
-### <font color=#FF827B>本地数据存储</font>
+### <div color=#FF827B>本地数据存储</div>
 
 这种方式就是比较手工了
 
@@ -380,7 +380,7 @@ Jojo;data;hello world;the;people;new;
 <hr>
 <br>
 
-## <font color=#FFC640>小节</font>
+## <div color=#FFC640>小节</div>
 一些准则有利于加速Ajax：
 * 减少请求数，可以通过合并JavaScript和CSS文件，或者使用提过一次Multipart XHR
 * 缩短页面加载时间，待主要内容加载后，才使用Ajax获取次要文件

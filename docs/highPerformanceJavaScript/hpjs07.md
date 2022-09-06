@@ -19,7 +19,7 @@ categories:
 <hr>
 <br>
 
-# <font color=#FFC640>避免双重求值（Double Evaluation）</font>
+# <div color=#FFC640>避免双重求值（Double Evaluation）</div>
 
 JavaScript 与很多其他语言一样，**允许你在程序中提取一个包含代码的字符串，然后动态执行**
 
@@ -46,11 +46,11 @@ setInterval("sum = num1 +num2", 100)
 
 当在JavaScript代码中执行另一段JavaScript代码时，都会导致双重求值的性能消耗
 
-<font color=#73D13D> 上面这些代码首先会以正常方式求值，然后在执行过程中对包**含于字符串中的代码**发起另一个求值运算</font>
+<div color=#73D13D> 上面这些代码首先会以正常方式求值，然后在执行过程中对包**含于字符串中的代码**发起另一个求值运算</div>
 <br>
 
 双重求值和直接求值性能对比：
-<font color=#F00> （**如果觉得测试代码不对的朋友，可以在评论区留言告诉我，不断修正**）</font>
+<div color=#F00> （**如果觉得测试代码不对的朋友，可以在评论区留言告诉我，不断修正**）</div>
 
 ```javascript
 var num1 = 1,num2 = 6;
@@ -79,7 +79,7 @@ IE浏览器：
 火狐浏览器：
 ![在这里插入图片描述](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/86281cbee22b4f45b1b84b9014bb859a~tplv-k3u1fbpfcp-zoom-1.image)
 
-从上面的测试可以看出，<font color=#FF827B>**双重求值的速度远远不如直接求值。**</font>
+从上面的测试可以看出，<div color=#FF827B>**双重求值的速度远远不如直接求值。**</div>
 
 
 
@@ -88,7 +88,7 @@ IE浏览器：
 ***原因***：每次调用eval()都要创建一个新的解释器/编译器实例，另外三个也是一样，所以这必然会导致代码执行速度变慢
 <br>
 
-<font color=#40A9FF>**像`setTimeout`和`setInterval`两个延时函数，第一个参数最好传入函数而不是字符串**。</font>
+<div color=#40A9FF>**像`setTimeout`和`setInterval`两个延时函数，第一个参数最好传入函数而不是字符串**。</div>
 当然了，正经人谁在延时函数上不写函数写字符串代码呀！ 狗头.jpg
 
 
@@ -100,7 +100,7 @@ IE浏览器：
 <br>
 
 
-# <font color=#FFC640>使用Object/Array直接量</font>
+# <div color=#FFC640>使用Object/Array直接量</div>
 
 在JavaScript中创建对象和数组的方法有很多种，但是**使用对象和数组直接量是最快的方式**
 
@@ -144,7 +144,7 @@ chrome浏览器:
 <br>
 
 数组直接量和new Array对比
-<font color=#F00> （**如果觉得测试代码不对的朋友，可以在评论区留言告诉我，不断修正**）</font>
+<div color=#F00> （**如果觉得测试代码不对的朋友，可以在评论区留言告诉我，不断修正**）</div>
 
 ```javascript
     console.time('数组直接量')
@@ -165,7 +165,7 @@ chrome浏览器:
 ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/eaa1e1be6f8f462dad0d2a65769e26cd~tplv-k3u1fbpfcp-zoom-1.image)
 
 
-<font color=#FF827B>**<u>下面这里划重点了</u>**</font>，在火狐浏览器测试结果很令我惊讶：
+<div color=#FF827B>**<u>下面这里划重点了</u>**</div>，在火狐浏览器测试结果很令我惊讶：
 
 **火狐浏览器：**
 ![在这里插入图片描述](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/010551d6b1ed40f38f4b6b50767a1b49~tplv-k3u1fbpfcp-zoom-1.image)
@@ -227,7 +227,7 @@ chrome浏览器:
 ***
 <br>
 
-# <font color=#FFC640>避免重复工作</font>
+# <div color=#FFC640>避免重复工作</div>
 
 **性能优化说的最多的就是避免重复工作**
 
@@ -252,7 +252,7 @@ chrome浏览器:
  <hr>
 <br><br>
  
- # <font color=#FFC640>小节</font>
+ # <div color=#FFC640>小节</div>
  
  
 **平时写代码时可以优化的点①**：

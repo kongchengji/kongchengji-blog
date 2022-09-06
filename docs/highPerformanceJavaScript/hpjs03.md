@@ -16,10 +16,10 @@ categories:
 * 代码的组织结构和解决具体问题的思路是影响代码性能的主要因素
 
 
-## <font color=#FFC640>循环</font>
+## <div color=#FFC640>循环</div>
 循环处理是常见的编程模式，也是提升性能必须要关注的重点之一
 
-### <font color=#FF7021>循环的类型</font>
+### <div color=#FF7021>循环的类型</div>
 
 四种循环类型
 
@@ -46,13 +46,13 @@ for (var prop in object) {
 
 <br>
 
-## <font color=#FFC640>循环性能</font>
+## <div color=#FFC640>循环性能</div>
 
 在四种循环中，**for-in循环明显比其他几种循环要慢**
 原因：for-in循环每次迭代操作都会同时搜索实例或原型属性，**对于相同迭代次数的循环，for-in循环最终只有其他类型速度的1/7**
 <br>
 
-### <font color=#FF7021>减少迭代工作量</font>
+### <div color=#FF7021>减少迭代工作量</div>
 减少迭代的工作量，一个提升循环整体速度的好方法就是限制循环中的耗时操作数量
 
 例子：
@@ -100,12 +100,12 @@ for(var i = items.length; i--;) {
 4. 一次函数调用 （ process(items[i]) ）
 <hr>
 
-### <font color=#FF7021>提示</font>
+### <div color=#FF7021>提示</div>
 当循环复杂度为O(n)时，**减少每次迭代的工作量**是最有效的方法。当复杂度大于O(n)时，着重**减少迭代次数**
 
 <br>
 
-### <font color=#FF7021>减少迭代次数 -- 达夫设备</font>
+### <div color=#FF7021>减少迭代次数 -- 达夫设备</div>
 
 达夫设备（Duff's Device）是一种限制循环迭代次数的模式
 **是否应该使用达夫设备，很大程度上依赖于迭代次数**
@@ -172,7 +172,7 @@ console.timeEnd('last2')
 ```
 <br>
 
-### <font color=#FF7021>提示</font>
+### <div color=#FF7021>提示</div>
 现代浏览器引擎其实已经经过几次优化了，在上面的效率测试代码运行时，如果times的次数在1000次左右的话，for循环和while循环还有达夫设备运行速度相差不大
 <hr>
 
@@ -181,7 +181,7 @@ console.timeEnd('last2')
 ##### chrome
 如果在chrome浏览器中，while循环和达夫设备明显速度快于for循环，但是while循环和达夫设备时间相差不大，甚至达夫设备可能会小于while循环
 
-<font color=#9254DE>**while > 达夫设备 > for循环**</font>
+<div color=#9254DE>**while > 达夫设备 > for循环**</div>
 
 测试1：
 ![\[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-qiqeHalc-1621406484048)(en-resource://database/586:1)\]](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e1af44100dc94b1eb5c63db15367179e~tplv-k3u1fbpfcp-zoom-1.image)
@@ -196,7 +196,7 @@ console.timeEnd('last2')
 ##### IE
 在IE浏览器中，达夫设备的效率会更高一些，for循环效率低于while循环
 
-<font color=#9254DE> **达夫设备 > while > for循环**</font>
+<div color=#9254DE> **达夫设备 > while > for循环**</div>
 
 测试1：
 ![\[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-xetQ6Shl-1621406484068)(en-resource://database/572:1)\]](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9d422f75643e4ee783bf53b278f80f45~tplv-k3u1fbpfcp-zoom-1.image)
@@ -211,7 +211,7 @@ console.timeEnd('last2')
 ##### FireFox
 在火狐浏览器中也和IE类似
 
-<font color=#9254DE>**达夫设备 > while > for循环**</font>
+<div color=#9254DE>**达夫设备 > while > for循环**</div>
 
 测试1：
 
@@ -227,17 +227,17 @@ console.timeEnd('last2')
 
 
 
-### <font color=#FF7021>基于函数的迭代</font>
+### <div color=#FF7021>基于函数的迭代</div>
 
 基于函数的迭代：forEach()
 
 forEach遍历一个数组的所有成员，并执行一个函数
 
-但是**所有情况下，<font color=#9254DE>基于循环的迭代比基于函数的迭代快8倍</font>，在运行速度要求严格时，基于循环的迭代优先于基于函数的迭代**
+但是**所有情况下，<div color=#9254DE>基于循环的迭代比基于函数的迭代快8倍</div>，在运行速度要求严格时，基于循环的迭代优先于基于函数的迭代**
 在严格要求性能时，基于函数的迭代不是合适的选择
 
 
-## <font color=#FFC640>条件语句</font>
+## <div color=#FFC640>条件语句</div>
 
 在JavaScript中，条件语句主要是if-else 和 switch两种
 
@@ -248,7 +248,7 @@ forEach遍历一个数组的所有成员，并执行一个函数
 **if-else语句可以考虑拆分成嵌套的if-else语句，最小化条件判断的次数，比如二分法**
 
 
-## <font color=#FFC640>递归</font>
+## <div color=#FFC640>递归</div>
 
 递归是可以将复杂的算法变得更加简单，比如阶乘函数：
 ```javascript
@@ -261,10 +261,10 @@ function factorial(n) {
 }
 ```
 
-### <font color=#FF7021>递归的缺点</font>
-<font color=#f00>①：递归函数潜在问题是终止条件不明确或缺少终止条件会导致函数长时间运行，也就是可能产生无限递归调用，使用户界面假死。</font>
+### <div color=#FF7021>递归的缺点</div>
+<div color=#f00>①：递归函数潜在问题是终止条件不明确或缺少终止条件会导致函数长时间运行，也就是可能产生无限递归调用，使用户界面假死。</div>
 
-<font color=#f00>②： 递归函数还可能遇到浏览器的“调用栈大小限制”</font>
+<div color=#f00>②： 递归函数还可能遇到浏览器的“调用栈大小限制”</div>
 
 #### 调用栈限制
 JavaScript引擎支持的递归数量与JavaScript调用栈大小直接相关。
@@ -285,7 +285,7 @@ function second() { first() }
 first();
 ```
 
-### <font color=#FF7021>迭代</font>
+### <div color=#FF7021>迭代</div>
 任何递归能实现的算法同样可以用迭代来实现。
 
 迭代算法通常包含几个不同的循环，优化后的循环替代长时间运行的函数可以提升性能。
@@ -295,7 +295,7 @@ first();
 把递归算法改用迭代实现是避免栈溢出错误的方法之一
 
 
-### <font color=#FF7021>Memoization</font>
+### <div color=#FF7021>Memoization</div>
 
 **减少工作量就是最好的性能优化技术**
 
@@ -352,7 +352,7 @@ var memfactorial = memoize(factorial)
 memfactorial(16)
 ```
 
-## <font color=#FFC640>小节</font>
+## <div color=#FFC640>小节</div>
 
 **平时写代码时可以优化的点①：**
 避免使用for-in循环
