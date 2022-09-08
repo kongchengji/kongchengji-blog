@@ -7,10 +7,11 @@ export default defineUserConfig({
   title: '空城机の博文',  // 名称
   description: '这是使用vuepress-reco进行的第一次配置',  // 描述
   dest: 'dist',  // 打包文件的位置
+  base: '/blog-project/',  // 准备发布到GitHub的仓库名称
   port: 9074,  // 运行端口号
   // 添加到html的head顶部的东西
   head: [
-    ['link', { rel: 'icon', href: '/img/icon.svg' }],
+    ['link', { rel: 'icon', href: '/blog-project/img/icon.svg' }],
     ['meta', { name: 'keywords', content: '空城机的个人博客网页' }],  
     ['meta', { name: 'description', content: '空城机的个人博客网页' }],  
     ['meta', { name: 'author', content: '空城机' }],  
