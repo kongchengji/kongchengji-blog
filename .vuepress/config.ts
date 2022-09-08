@@ -7,7 +7,7 @@ export default defineUserConfig({
   title: '空城机の博文',  // 名称
   description: '这是使用vuepress-reco进行的第一次配置',  // 描述
   dest: 'dist',  // 打包文件的位置
-  base: '/blog-project/',  // 准备发布到GitHub的仓库名称
+  base: '/kongchengji-project/',  // 准备发布到GitHub的仓库名称
   port: 9074,  // 运行端口号
   // 添加到html的head顶部的东西
   head: [
