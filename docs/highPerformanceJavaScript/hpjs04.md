@@ -10,7 +10,7 @@ categories:
 ---
 
 
-# <center><div color=#40A9FF>字符串</div></center>
+# <div color=#40A9FF>字符串</div>
 字符串连接会导致令人惊讶的性能问题
 
 ## <div color=#FFC640>字符串拼接方法</div>
@@ -50,7 +50,8 @@ categories:
 我实际循环多次操作后，发现str += "one" + "two"速度更快，**是我使用的测试代码不准确吗？**
 
 **纸上得来终觉浅，知此事要躬行**
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210520235521830.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2MTcxMjg3,size_16,color_FFFFFF,t_70#pic_center =300x300)
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210520235521830.png)
 
 
 测试代码：

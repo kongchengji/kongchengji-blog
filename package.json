@@ -1,6 +1,7 @@
 {
-  "name": "vuepress-theme-reco-demo",
+  "name": "kongchengji-blog",
   "version": "1.0.0",
+  "main": "index.js",
   "description": "制作个人博客页面（使用vuepress）",
   "author": "kongchengji",
   "license": "MIT",
@@ -10,7 +11,6 @@
     "build": "vuepress build ."
   },
   "dependencies": {
-    "@vuepress/plugin-register-components": "^1.9.7",
     "vuepress": "2.0.0-beta.48",
     "vuepress-theme-reco": "2.0.0-beta.33"
   }
