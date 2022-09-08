@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-d09e7be4","path":"/categories/gaoxingnenJavaScript/1/","title":"","lang":"zh-CN","frontmatter":{"layout":"Categories"},"excerpt":"","headers":[],"git":{},"filePathRelative":null}');export{e as data};
