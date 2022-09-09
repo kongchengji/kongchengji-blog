@@ -11,7 +11,7 @@ export default defineUserConfig({
   port: 9074,  // 运行端口号
   // 添加到html的head顶部的东西
   head: [
-    ['link', { rel: 'icon', href: '/blog-project/img/icon.svg' }],
+    ['link', { rel: 'icon', href: '/kongchengji-blog/img/icon.svg' }],
     ['meta', { name: 'keywords', content: '空城机的个人博客网页' }],  
     ['meta', { name: 'description', content: '空城机的个人博客网页' }],  
     ['meta', { name: 'author', content: '空城机' }],  
